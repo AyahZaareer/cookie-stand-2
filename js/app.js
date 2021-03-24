@@ -50,6 +50,7 @@ function renderHeader(){
   headerRowEl.appendChild(th3El);
   th3El.textContent = 'Daily Location Total';
 }
+let newcook = [];
 function Stand(location, max,min, avg,custBerH,cookiesPerH,total) {
   this.location = location;
   this.max = max;
@@ -59,11 +60,14 @@ function Stand(location, max,min, avg,custBerH,cookiesPerH,total) {
   this.cookiesPerH=cookiesPerH;
   this.total=total;
   this.totalstor=[];
+  newcook.push(this);
 }
 Stand.prototype.getCust =function(){
   for (let i=0; i < h.length; i++) {
     this.custBerH.push( Math.floor(getRandom (this.min, this.max)));
-  }},
+  }
+},
+
 Stand.prototype.getCookies = function () {
   for (let i=0; i < h.length; i++) {
     this.cookiesPerH.push( Math.floor( this.custBerH[i]*this.avg));
@@ -94,6 +98,7 @@ Stand.prototype.render= function(){
   headerRowE2.appendChild(td2El);
   td2El.textContent=`${this.total}`;
 };
+
 renderHeader();
 const stand1 = new Stand('Seattle', 65, 23, 6.3,[],[],0);
 stand1.render();
@@ -106,3 +111,51 @@ stand4.render();
 const stand5 = new Stand('Lima', 16, 2, 4.6,[],[],0);
 stand5.render();
 footer();
+
+let myForm= document.getElementById('addstor');
+//console.log(myForm);
+//let storSection=document.getElementById('store');
+myForm.addEventListener('submit',addNewStor);
+function addNewStor (event)
+{
+  //tableEl.removeChild(tableEl.lastChild);
+  //let lastRow = tableEl.rows[ tableEl.rows.length - 1 ];
+  //console.log(lastRow);
+  let lastRow = tableEl.rows.length;
+  tableEl.deleteRow(lastRow-1);
+
+  //tableEl.removeChild(tableEl.lastChild);
+  event.preventDefault();
+  let location=event.target.location.value;
+  //console.log(Location);
+
+  let max=Number(event.target.max.value);
+  //console.log(max);
+  let min=Number(event.target.min.value);
+  let avg =Number(event.target.avg.value);
+  let newStore=new Stand(location,max,min,avg,[],[],0);
+  newStore.render();
+
+  const headerRowEl22 = document.createElement('tr');
+  tableEl.appendChild(headerRowEl22);
+  const th33 =document.createElement('th');
+  headerRowEl22.appendChild(th33);
+  th33.textContent='Totals';
+  for (let i = 0; i < footerdata.length; i++) {
+    const th33 =document.createElement('td');
+    headerRowEl22.appendChild(th33);
+    th33.textContent=footerdata[i];
+  }
+  for (let i = 0; i < h.length; i++) {
+    totaloftotal+= footerdata[i];
+  }
+  const td44 =document.createElement('td');
+  headerRowEl22.appendChild(td44);
+  td44.textContent=totaloftotal;
+
+
+
+
+}
+
+
