@@ -1,3 +1,4 @@
+
 header 
 {
     width: 100%;
@@ -139,3 +140,41 @@ table td
      font-size: 18px;
      font-family: fantasy;
 }
+
+table{
+    background-color: rgb(114, 79, 79);
+    text-align: center;
+
+    height: 140px;
+
+}
+table th{
+    background-color: rgb(194, 138, 147);
+}
+
+
+table tr th {
+ padding: 10px;
+    font-weight:bold ;
+    font-size: 20px;
+    background-color:rgb(206, 87, 8);
+    width :80px;
+    font-family: 'Berkshire Swash', cursive;
+}
+table td{
+    background-color: rgb(209, 36, 17);
+    width: 70px;
+    height:30px;
+ 
+    font-size: 18px;
+    font-family: fantasy;
+}
+
+h1
+{
+  color: rgb(43, 25, 146);
+    padding: 50px;
+    font-size:50px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+

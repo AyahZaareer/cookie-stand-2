@@ -1,7 +1,9 @@
+
 'use strict';
 let h = ['6am ','7am ','8am ','9am ','10am ','11am ','12pm ','1pm ','2pm ','3pm ','4pm ','5pm ','6pm ','7pm '];
 function getRandom(min,max){
   return Math.floor(Math.random() * (max - min + 1) + min);
+
 }
 const container = document.getElementById('store');
 const articleEl = document.createElement('article');
@@ -14,6 +16,7 @@ let footerdata = [];
 for (let i = 0; i < h.length; i++) {
   footerdata.push(0);
 }
+
 function footer(){
   const headerRowEl2 = document.createElement('tr');
   tableEl.appendChild(headerRowEl2);
@@ -66,6 +69,7 @@ Stand.prototype.getCookies = function () {
     this.cookiesPerH.push( Math.floor( this.custBerH[i]*this.avg));
     this.total=this.total+this.cookiesPerH[i];
     footerdata[i]+=this.cookiesPerH[i];
+
   }
   this.totalstor.push(this.total);
 },
@@ -85,6 +89,7 @@ Stand.prototype.render= function(){
     headerRowE2.appendChild(td1El);
     td1El.textContent = `${this.cookiesPerH[i]}`;
   }
+
   const td2El = document.createElement('td');
   headerRowE2.appendChild(td2El);
   td2El.textContent=`${this.total}`;
