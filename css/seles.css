@@ -1,3 +1,7 @@
+body
+{
+     background-color: sandybrown;
+}
 table
 {
     margin-left: 40px;
@@ -54,6 +58,7 @@ form
      font-size: 30px;
      font-weight: bold;
      margin-left: 20px;
+     
 }
 input[type=text]
 {

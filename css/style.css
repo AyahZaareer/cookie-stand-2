@@ -1,10 +1,23 @@
 
+body
+{
+    display: inline-block;
+    background-color: darksalmon;
+}
 header 
 {
-    width: 100%;
-    background: #fffbfbf1;
-    height: 100px;
+    width: 150%;
+    background: #e65c5cf1;
+    height: 150px;
     padding: 5px;
+    
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/47/45/254/fish-cookies-white-background-wallpaper-preview.jpg");
+    background-repeat: repeat-x;
+}
+header nav img
+{
+    width: 100px;
+    height: 20px;
 }
 
 header img
@@ -19,13 +32,20 @@ header img
 header nav ul li
 {    
     font-family: cursive;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-right: 90px;
     margin-left: 50px;
     margin-bottom: 60px;
     font-size: 80px;
     display:inline-block;
     padding: 5px;
+    
+}
+header a
+{
+    color: black;
+    font-weight: bold;
+    font-size: 100px;
 }
 
 h1{padding: 20px;
@@ -41,7 +61,8 @@ div img
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 80%;
+    width: 70%;
+    height: 500px;
   
 }
 
@@ -59,7 +80,7 @@ strong img
 article
 {
     width: 90%;
-   
+  
 }
 article img
 {
@@ -68,28 +89,31 @@ article img
     margin-left: 65px;
     margin-right: 20px;
     margin-bottom: 100px;
-    width: 40%;  
+    width: 45%;  
 }
-article h2
+article nav
+{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+article nav h2
 {
     font-family: cursive;
-    padding: 20px;
+    padding: 10px;
     font-size: 70px;
     font-weight: bold;
     margin-left: 20px;
     margin-bottom: 20px; 
 }
-article p
+article nav p
 {  color: green;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
    text-align: justify;
 }
-article button
-{
-   margin-top: 30px;
-    font-size: 30px;
-}
+
 footer
 {
     clear: both;
@@ -106,69 +130,7 @@ body a
 }
  
 
-table
-{
-    margin-left: 40px;
-     background-color: rgb(114, 79, 79);
-     text-align: center;
- 
-     height: 140px;
- 
-}
-table th
-{
-     
-     background-color: rgb(194, 138, 147);
-}
- 
- 
-table tr th 
-{
-     padding: 10px;
-     font-weight:bold ;
-     font-size: 20px;
-     background-color:rgb(206, 87, 8);
-     width :100px;
-     font-family: 'Berkshire Swash', cursive;
-}
-table td
-{
-     background-color: rgb(209, 36, 17);
-     width: 70px;
-     height:30px;
-  
-     font-size: 18px;
-     font-family: fantasy;
-}
 
-table{
-    background-color: rgb(114, 79, 79);
-    text-align: center;
-
-    height: 140px;
-
-}
-table th{
-    background-color: rgb(194, 138, 147);
-}
-
-
-table tr th {
- padding: 10px;
-    font-weight:bold ;
-    font-size: 20px;
-    background-color:rgb(206, 87, 8);
-    width :80px;
-    font-family: 'Berkshire Swash', cursive;
-}
-table td{
-    background-color: rgb(209, 36, 17);
-    width: 70px;
-    height:30px;
- 
-    font-size: 18px;
-    font-family: fantasy;
-}
 
 h1
 {
@@ -177,4 +139,3 @@ h1
     font-size:50px ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
-
